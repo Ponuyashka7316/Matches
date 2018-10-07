@@ -1,8 +1,14 @@
 ﻿namespace Matches
 {
-    static public class MatchSolution
+    public class MatchSolution
     {
-        static public void CalculateMatchesCount(ref int  matches, int n)
+        private int matches;
+        public MatchSolution()
+        {
+            matches = 0;
+        }
+
+       public void CalculateMatchesCount(int n)
         {
             
             for (int i = 1; i <= n; i++)
@@ -14,6 +20,10 @@
                 else
                     matches += 3;
             }
+        }
+
+        public override string ToString() {
+            return "Matches: " + matches;
         }
     }
 }

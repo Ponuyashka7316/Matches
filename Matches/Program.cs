@@ -8,9 +8,9 @@ namespace Matches
         static void Main(string[] args)
         {
             int n = Int32.Parse(Console.ReadLine());
-            int matches = 0;
-            MatchSolution.CalculateMatchesCount(ref matches, n);
-            Console.WriteLine(matches);
+            MatchSolution sln = new MatchSolution();
+            sln.CalculateMatchesCount(n);
+            Console.WriteLine(sln.ToString());
         }
     }
 }
